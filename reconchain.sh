@@ -1,7 +1,7 @@
 #!/bin/bash
 #Thanks to @thecybermentor for the base script.
 
-#Makes directory structure and some files.
+#Makes a directory structure and files for later use
 function makeDirs {
     #Directory structure
     [ ! -d "$URL/recon" ] && mkdir -p $URL/recon/{scans,httprobe,potential_takeovers,wayback/{params,extensions}}
@@ -12,7 +12,7 @@ function makeDirs {
 
 function badInput {
     echo "[-] ERROR: You must run with a url as parameter: $0 example.com"
-    exit 1 #Maybe get more specific about the error code later.
+    exit 1 #Expand error codes for better UX
 }
 
 #Assetfinder for finding subdomains.
